@@ -1,0 +1,8 @@
+{
+    // Type-checks the tests, the build scripts and the Vite plugin's types (they run in Node, not the browser).
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "types": ["node", "vite/client"]
+    },
+    "include": ["./**/*.ts", "../src", "../scripts", "../vite/*.d.ts", "../*.ts"]
+}

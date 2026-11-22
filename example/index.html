@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tier-engine example</title>
+  <link rel="stylesheet" href="./example.css">
+</head>
+<body>
+  <main>
+    <h1>tier-engine example</h1>
+    <p>Drag the colours into tiers. Or with the keyboard: Tab to one, press 1, 2 or 3 to send it to that tier, then Alt+arrows to move it on. Nothing here is saved.</p>
+    <div class="bar" role="toolbar" aria-label="Board">
+      <button type="button" id="undo">Undo</button>
+      <button type="button" id="redo">Redo</button>
+      <label>Layout <select id="layout"><option value="tiers">Rows</option><option value="chart">Chart</option></select></label>
+      <label>Shape <select id="shape"><option value="square">Square</option><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select></label>
+      <button type="button" id="svg">Export SVG</button>
+      <button type="button" id="png">Export PNG</button>
+    </div>
+    <section aria-label="Tiers"><div id="tiers"></div></section>
+    <section aria-label="Not ranked"><h2>Not ranked</h2><div id="pool"></div></section>
+    <p id="status" role="status"></p>
+  </main>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

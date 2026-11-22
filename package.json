@@ -1,0 +1,55 @@
+{
+    "name": "tier-engine",
+    "version": "1.0.0",
+    "description": "The tier board behind Tierinator: a list model with its saved format, undo, storage, share links, backups, CSV and group ranking; a board to mount in any page; and exports as SVG or PNG. TypeScript source, compiled by the app that installs it. No runtime dependencies.",
+    "license": "MIT",
+    "type": "module",
+    "packageManager": "pnpm@12.15.0",
+    "exports": {
+        "./core": "./src/core/index.ts",
+        "./board": "./src/board/index.ts",
+        "./board.css": "./src/board/board.css",
+        "./export": "./src/export/index.ts",
+        "./safe": "./src/safe/index.ts",
+        "./vite": {
+            "types": "./vite/plugin.d.ts",
+            "default": "./vite/plugin.js"
+        }
+    },
+    "files": [
+        "src",
+        "vite",
+        "LICENSE",
+        "NOTICE",
+        "README.md",
+        "CHANGELOG.md"
+    ],
+    "scripts": {
+        "lint": "biome check --error-on-warnings",
+        "format": "biome check --write",
+        "check": "tsc -p . && tsc -p tests",
+        "knip": "knip",
+        "test:unit": "vitest run",
+        "example": "vite example",
+        "test:browser": "playwright test",
+        "guard": "node scripts/identity-guard.ts",
+        "verify": "pnpm lint && pnpm check && pnpm knip && pnpm test:unit"
+    },
+    "engines": {
+        "node": ">=22.12"
+    },
+    "peerDependencies": {
+        "vite": "^8.3.0"
+    },
+    "devDependencies": {
+        "@axe-core/playwright": "4.14.0",
+        "@biomejs/biome": "2.5.15",
+        "@playwright/test": "1.63.0",
+        "@types/node": "22.20.5",
+        "happy-dom": "21.0.4",
+        "knip": "6.42.1",
+        "typescript": "6.0.3",
+        "vite": "8.3.5",
+        "vitest": "5.1.0"
+    }
+}

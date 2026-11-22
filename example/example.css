@@ -1,0 +1,65 @@
+/* example/example.css: the page around the board. The board's own look is tier-engine/board.css,
+   left on its defaults here except for two variables, to show where a theme goes. */
+:root {
+    color-scheme: dark;
+    --cyan: #ffd166;
+    --font-head: system-ui, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0c;
+    color: #ededee;
+    font: 15px/1.5 system-ui, sans-serif;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0 0 4px;
+}
+
+h2 {
+    font-size: 15px;
+    margin: 24px 0 8px;
+}
+
+.bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin: 16px 0;
+}
+
+button,
+select {
+    min-height: 32px;
+    padding: 4px 12px;
+    border: 1px solid #3a3a3e;
+    border-radius: 7px;
+    background: #202022;
+    color: inherit;
+    font: inherit;
+}
+
+button:focus-visible,
+select:focus-visible {
+    outline: 2px solid #ffd166;
+    outline-offset: 2px;
+}
+
+#pool {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    min-height: 80px;
+    padding: 8px;
+    border-radius: 7px;
+    background: #141416;
+}
